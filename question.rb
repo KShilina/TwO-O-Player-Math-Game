@@ -4,7 +4,7 @@ class Question
   # - number1 and number2 (two random numbers between 1 and 20)
   def initialize
     @number1 = rand(1...20)
-    @number2 = rand(10...42)
+    @number2 = rand(1...20)
   end
 
   #
