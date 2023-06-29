@@ -1,24 +1,22 @@
 class Question
-  #
-  # State = variables:
-  # - number1 and number2 (two random numbers between 1 and 20)
+  attr_reader :number1, :number2
+
+  # Define the Question class with two attributes: number1 and number2
+
   def initialize
     @number1 = rand(1...20)
     @number2 = rand(1...20)
+    # Initialize a new Question instance
+    # Set number1 and number2 to random numbers between 1 and 20
   end
 
-  #
-  # Methods = behavior:
-  # - generate : generate a new addition question
   def generate_question
-    puts "What is the sum of #{@number1} and #{@number2}?"
+    "What is the sum of #{@number1} and #{@number2}?"
+    # Generate a question by combining the numbers in a string
   end
 
-  # - correct_answer? ( if ture (Yes! You are correct)/ if false(Seriously? No!) )
   def correct_answer?(answer)
     @number1 + @number2 == answer
+    # Check if the provided answer is correct by comparing it to the sum of number1 and number2
   end
 end
-
-question1 = Question.new
-question1.generate
