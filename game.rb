@@ -67,13 +67,3 @@ class Game
     puts "#{winner.name} wins with a score of #{winner.number_of_lives}/3." # Display the winner's name and score
   end
 end
-
-# Start the game
-puts 'Welcome to Ruby Math Game! This game requires two players.'
-puts "Enter Player 1's name"
-player1 = Player.new(gets.chomp) # Create Player 1 object
-puts "Enter Player 2's name"
-player2 = Player.new(gets.chomp) # Create Player 2 object
-
-game = Game.new(player1, player2) # Create a new game instance with the two players
-game.start_the_game # Start the game
